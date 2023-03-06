@@ -7,7 +7,7 @@ class CustomListsPlan extends StatefulWidget {
   State<CustomListsPlan> createState() => _CustomListsPlanState();
 }
 
-final bool _switchValue = true;
+const bool _switchValue = true;
 
 class _CustomListsPlanState extends State<CustomListsPlan> {
   @override

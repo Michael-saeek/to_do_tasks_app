@@ -12,9 +12,10 @@ class SectionTodaysPlan extends StatelessWidget {
         const TextTitle(title: "Today's plan"),
         SizedBox(
           //  width: double.infinity,
-          height: 400,
+          height: 250,
           child: ListView.builder(
-            itemCount: 3,
+            itemCount: 5,
+            scrollDirection: Axis.vertical,
             itemBuilder: (_, int index) => const Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: CustomListsPlan(),
