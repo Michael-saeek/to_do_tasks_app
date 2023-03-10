@@ -7,9 +7,9 @@ class CustomListsPlan extends StatefulWidget {
   State<CustomListsPlan> createState() => _CustomListsPlanState();
 }
 
-const bool _switchValue = true;
-
 class _CustomListsPlanState extends State<CustomListsPlan> {
+  bool isSelect = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,8 +28,18 @@ class _CustomListsPlanState extends State<CustomListsPlan> {
               Checkbox(
                   checkColor: Colors.white,
                   activeColor: Colors.purple[400],
-                  value: _switchValue,
-                  onChanged: (bool? value) {}),
+                  value: isSelect,
+                  onChanged: (bool? value) {
+                    if (isSelect == true) {
+                      setState(() {
+                        isSelect = value!;
+                      });
+                    } else {
+                      setState(() {
+                        isSelect = value!;
+                      });
+                    }
+                  }),
               const Text('Chequeo medico')
             ],
           ),
